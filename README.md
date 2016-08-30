@@ -1,2 +1,2 @@
 # node-pohl
-distributed redis queue messaging, emits events, but makes sure that only a single instance actually works on the task.
+distributed redis queue messaging, uses pub & sub, but makes sure that only a single instance actually works on the task via setnx.
