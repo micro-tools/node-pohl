@@ -96,5 +96,5 @@ setTimeout(() => {
 }, 150);
 
 setTimeout(() => {
-     process.exit();
+     process.exit(0);
 }, 300);

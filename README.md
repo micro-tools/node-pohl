@@ -11,16 +11,14 @@
 - all you need is a redis cluster/sentinel setup (works with single instance as well..), include this lib in your services and call 2 functions thats about it
 - message queuing, task locking, failovers or timeouts have been wrapped in a super simple callback-like syntax that also scales inside of your software to multiple topics and endless message/task types
 - overhead is between 3-5ms constantly
+- benchmarks hits about 1550 rps (full-roundtrip) per second on i7 @ 2GHZ and Redis 3.2.1 single docker instance
 
 #how to use/install
 - `npm install pohl`
 - check ./example/index.js for a usage example
 - run example with `npm test`
 - run tests with `npm test` (requires localhost redis with default conf)
-
-#what is coming up in the future?
-- performance benchmark, that can be run via npm run benchmark
-- possible performance updates
+- run benchmark with `npm run benchmark`
 
 #other
 - License: MIT

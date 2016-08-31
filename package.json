@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./example/index.js",
-    "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 25"
+    "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 25",
+    "benchmark": "node ./perf/benchmark.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,6 @@
   "devDependencies": {
     "expect.js": "~0.3.1",
     "mocha": "~1.18.2",
-    "loadtest": "^1.3.0",
     "metrics": "^0.1.9",
     "istanbul": "~0.4.2"
   }
