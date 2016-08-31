@@ -1,5 +1,5 @@
 # node-pohl
-- distributed redis queue messaging
+- reliable distributed rpc messages via redis in simple callback-style
 - ES6, coverage 60%+, lightweight, scalable & fast
 - uses pub & sub, but makes sure that only a single instance actually works on the task via setnx.
 - kind of rpc library that feels like making simple callbacks except for the fact that you can make them between services and not classes
