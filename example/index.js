@@ -67,7 +67,7 @@ setTimeout(() => {
         }
     );
 
-}, 333);
+}, 100);
 
 //again for the time (needs to warm up)
 setTimeout(() => {
@@ -93,4 +93,8 @@ setTimeout(() => {
         }
     );
 
-}, 666);
+}, 150);
+
+setTimeout(() => {
+     process.exit();
+}, 300);

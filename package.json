@@ -1,6 +1,6 @@
 {
   "name": "pohl",
-  "version": "0.5.1",
+  "version": "1.0.1",
   "description": "reliable distributed redis messages via without mem copy and a single instance trigger",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "queue",
     "fast",
     "task",
-    "messaging"
+    "messaging",
+    "rpc"
   ],
   "author": "Christian Fröhlingsdorf <chris@5cf.de>",
   "license": "MIT",

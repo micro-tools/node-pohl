@@ -17,7 +17,7 @@ describe("Usage Integration", function(){
                 keyPrefix: "pohl:"
             }
         },
-        log: true,
+        log: false,
         timeout: 800
     };
 
@@ -27,7 +27,7 @@ describe("Usage Integration", function(){
 
         const receiveTask = (err, task, callback) => {
 
-            expect(err).to.be.equal(undefined);
+            expect(err).to.be.equal(null);
 
             if(task.scenario){
                 switch(task.scenario){
@@ -66,7 +66,7 @@ describe("Usage Integration", function(){
         p.sendTask(aTask,
             (err, taskResult) => {
 
-                expect(err).to.be.equal(undefined);
+                expect(err).to.be.equal(null);
                 expect(typeof taskResult).to.be.equal("object");
                 expect(taskResult.okay).to.be.equal("worked");
                 console.log(taskResult.okay);
@@ -77,7 +77,7 @@ describe("Usage Integration", function(){
     });
 
 
-    it("should get timeout on no answer", function(){
+    it("should get timeout on no answer", function(done){
 
         let aTask = {
             make: "something",
@@ -88,7 +88,7 @@ describe("Usage Integration", function(){
         p.sendTask(aTask,
             (err, taskResult) => {
 
-                expect(err).not.to.be.equal(undefined);
+                expect(err).not.to.be.equal(null);
                 expect(taskResult).to.be.equal(undefined);
                 console.log(err);
 
@@ -97,7 +97,7 @@ describe("Usage Integration", function(){
         );
     });
 
-    it("should error on callback for error in task process", function(){
+    it("should error on callback for error in task process", function(done){
 
         let aTask = {
             make: "something",
@@ -108,7 +108,7 @@ describe("Usage Integration", function(){
         p.sendTask(aTask,
             (err, taskResult) => {
 
-                expect(err).not.to.be.equal(undefined);
+                expect(err).not.to.be.equal(null);
                 expect(taskResult).to.be.equal(undefined);
                 expect(err).to.be.equal("error");
                 console.log(err);
@@ -118,7 +118,7 @@ describe("Usage Integration", function(){
         );
     });
 
-    it("should be fast", function(){
+    it("should be fast", function(done){
 
         let startT = Date.now();
 
@@ -132,17 +132,27 @@ describe("Usage Integration", function(){
 
                 let endT = Date.now();
 
-                expect(err).to.be.equal(undefined);
+                expect(err).to.be.equal(null);
                 expect(taskResult).not.to.be.equal(undefined);
                 expect(taskResult.okay).to.be.equal("worked");
 
                 let diff = endT - startT;
                 console.log("took: " + diff + "ms.");
-                expect(diff < 5).to.be.equal(true);
+                expect(diff <= 5).to.be.equal(true);
 
                 done();
             }
         );
+    });
+
+    it("should see an empty stack", function(done){
+
+        setTimeout(() => {
+
+            expect(p.getStackSize()).to.be.equal(0);
+            done();
+
+        }, 1000);
     });
 
 });
