@@ -10,6 +10,7 @@
 - there has to be a way to have a standing connection, that sends messages reliably, distributed, scalable and fast with a fixed overhead that can be calculated
 - all you need is a redis cluster/sentinel setup (works with single instance as well..), include this lib in your services and call 2 functions thats about it
 - message queuing, task locking, failovers or timeouts have been wrapped in a super simple callback-like syntax that also scales inside of your software to multiple topics and endless message/task types
+- overhead is between 3-5ms constantly
 
 #how to use/install
 - `npm install pohl`
@@ -19,6 +20,7 @@
 
 #what is coming up in the future?
 - performance benchmark, that can be run via npm run benchmark
+- possible performance updates
 
 #other
 - License: MIT
