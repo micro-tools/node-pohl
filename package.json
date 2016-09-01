@@ -1,11 +1,11 @@
 {
   "name": "pohl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
   "scripts": {
     "start": "node ./example/index.js",
-    "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 25",
+    "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 60",
     "benchmark": "node ./perf/benchmark.js"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "expect.js": "~0.3.1",
     "mocha": "~1.18.2",
     "metrics": "^0.1.9",
-    "istanbul": "~0.4.2"
+    "istanbul": "~0.4.2",
+    "async": "~2.0.1"
   }
 }
