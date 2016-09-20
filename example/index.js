@@ -16,13 +16,24 @@ const config = {
         }
     },
     log: true,
-    timeout: 800
+    timeout: 800,
+    circuitCheck: 2000, //interval
+    timeoutThreshold: 5 //max errors in said interval before circuit is opened
 };
 
 //you will need an instance + topic per RPC that you want to implement
 //of course your tasks can differ, and you can return errors, just like
 //you use the old callbacks
 const p = new Pohl(config);
+
+//listen for some metric events (to send to influx for example)
+p.on("metric", (type, value) => {
+    switch(type){
+        case "duration": console.log("took " + value + " ms"); break;
+        case "send": console.log("send state increment for: " + value); break;
+        default: console.log(type + ": " + value); break;
+    }
+});
 
 //on one service you setup a receiver, that works on tasks and returns them back to the sender
 

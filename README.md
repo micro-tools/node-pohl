@@ -1,8 +1,10 @@
 # node-pohl
 - reliable distributed rpc messages via redis in simple callback-style
-- ES6, coverage 60%+, lightweight, scalable & fast
+- ES6, coverage 66%+, lightweight, scalable & fast
 - uses pub & sub, but makes sure that only a single instance actually works on the task via setnx.
 - kind of rpc library that feels like making simple callbacks except for the fact that you can make them between services and not classes
+- simplistic circuit breaker to prevent timeout waves
+- metric events
 
 #use case
 - image you have enterprise microservices that have to make rpc/rest/soap calls to dispatch other information during incoming requests
