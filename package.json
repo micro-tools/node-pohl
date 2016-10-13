@@ -1,6 +1,6 @@
 {
   "name": "pohl",
-  "version": "1.2.0",
+  "version": "1.5.1",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,8 @@
   "dependencies": {
     "uuid": "~2.0.2",
     "ioredis": "~2.3",
-    "log4bro": "~1.6"
+    "log4bro": "~1.6",
+    "redlock": "~2.0.1"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
