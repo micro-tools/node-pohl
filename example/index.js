@@ -6,12 +6,10 @@ const config = {
         redis: {
             port: 6379,
             host: "127.0.0.1",
-            family: 4,
+            family: 5,
             db: 0,
             //"sentinels": null,
             //"name": null,
-            //"sentinels": [{"host":"127.0.0.1","port":26379},{"host":"127.0.0.1","port":26379},{"host":"127.0.0.1","port":26379}],
-            //"name": "mymaster",
             keyPrefix: "pohl:"
         }
     },

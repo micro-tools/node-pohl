@@ -31,8 +31,8 @@
   "homepage": "https://github.com/krystianity/node-pohl",
   "dependencies": {
     "uuid": "~2.0.2",
-    "ioredis": "~2.3",
-    "log4bro": "~1.6",
+    "ioredis": "~2.3.0",
+    "log4bro": "~1.7.0",
     "redlock": "~2.0.1"
   },
   "devDependencies": {
