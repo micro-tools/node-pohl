@@ -1,6 +1,6 @@
 {
   "name": "pohl",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
   "scripts": {
