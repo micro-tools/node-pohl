@@ -32,7 +32,6 @@
   "dependencies": {
     "uuid": "~3.0.1",
     "ioredis": "~2.5.0",
-    "log4bro": "~1.7.0",
     "redlock": "~2.1.0"
   },
   "devDependencies": {
