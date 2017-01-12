@@ -3,6 +3,8 @@ const Pohl = require("./../index.js");
 const config = {
     topic: "pohl",
     autoReconnectInterval: 1500,
+    logger: msg => console.log("info: " + JSON.stringify(msg)),
+    debugger: msg => console.log("debug: " + JSON.stringify(msg)),
     cache: {
         redis: {
             port: 6379,
