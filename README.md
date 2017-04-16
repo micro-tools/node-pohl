@@ -1,4 +1,7 @@
 # node-pohl
+
+[![Build Status](https://travis-ci.org/krystianity/node-pohl.svg?branch=master)](https://travis-ci.org/krystianity/node-pohl)
+
 - reliable distributed rpc messages via redis in simple callback-style
 - ES6, coverage 66%+, lightweight, scalable & fast
 - uses pub & sub, but makes sure that only a single instance actually works on the task via redlock algorithm.
