@@ -3,6 +3,7 @@
   "version": "1.11.0",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "start": "node ./example/index.js",
     "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 60",
