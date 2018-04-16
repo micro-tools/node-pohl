@@ -3,6 +3,7 @@
   "version": "1.11.0",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "start": "node ./example/index.js",
     "test": "istanbul cover _mocha -- -R spec test/int/* && istanbul check-coverage --statements 60",
@@ -30,9 +31,11 @@
   },
   "homepage": "https://github.com/krystianity/node-pohl",
   "dependencies": {
-    "uuid": "~3.2.1",
+    "@types/ioredis": "^3.2.7",
+    "@types/redlock": "^3.0.1",
     "ioredis": "~3.2.2",
-    "redlock": "~3.1.0"
+    "redlock": "~3.1.0",
+    "uuid": "~3.2.1"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
