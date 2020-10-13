@@ -1,6 +1,6 @@
 {
   "name": "pohl",
-  "version": "1.13.0",
+  "version": "1.14.0",
   "description": "reliable distributed rpc messages via redis in simple callback-style",
   "main": "index.js",
   "types": "index.d.ts",
@@ -31,17 +31,17 @@
   },
   "homepage": "https://github.com/krystianity/node-pohl",
   "dependencies": {
-    "@types/ioredis": "^4.16.4",
+    "@types/ioredis": "^4.17.5",
     "@types/redlock": "^4.0.1",
     "ioredis": "^4.17.3",
-    "redlock": "~4.1.0",
-    "uuid": "~8.1.0"
+    "redlock": "~4.2.0",
+    "uuid": "~8.3.1"
   },
   "devDependencies": {
     "async": "~3.2.0",
     "expect.js": "~0.3.1",
     "istanbul": "~0.4.5",
     "metrics": "^0.1.21",
-    "mocha": "~7.2.0"
+    "mocha": "~8.1.3"
   }
 }
